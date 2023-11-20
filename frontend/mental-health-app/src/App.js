@@ -1,23 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import Layout from './layout/Layout';
+import Home from './pages/Home';
+import Activities from './pages/Activities';
+import Calendar from './pages/Calendar';
+import ChatBot from './pages/ChatBot';
+import DailyTracker from './pages/DailyTracker';
+import Games from './pages/Games';
+import Resources from './pages/Resources';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path='/activity' element={<Activities />}/>
+          <Route path='/calendar' element={<Calendar /> }/>
+          <Route path='/chatbot' element={<ChatBot />}/>
+          <Route path='/dailytracker' element={<DailyTracker />}/>
+          <Route path="/game" element={<Games />} />
+          <Route path='/resources' element={<Resources />}/>
+          <Route path='*' element={<Home/>}/>
+        </Routes>
+      </Layout>
     </div>
   );
 }
