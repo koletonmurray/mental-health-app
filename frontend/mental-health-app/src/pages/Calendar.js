@@ -1,45 +1,64 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
-import "./MentalHealthCalendar.css"; // Import your custom CSS
 
 const MentalHealthCalendar = () => {
   const [date, setDate] = useState(new Date());
-  const [moods, setMoods] = useState({});
+  const [selectedDate, setSelectedDate] = useState(null);
+  const [colors, setColors] = useState({});
 
-  useEffect(() => {
-    const savedMoods = localStorage.getItem("moods");
-    if (savedMoods) {
-      setMoods(JSON.parse(savedMoods));
-    }
-  }, []);
+  const colorOptions = ["#FFB6C1", "#87CEEB", "#98FB98", "#FFFFE0", "#FFDAB9"]; // Example colors
 
-  useEffect(() => {
-    localStorage.setItem("moods", JSON.stringify(moods));
-  }, [moods]);
-
-  const onDayClick = (value, event) => {
+  const onDayClick = (value) => {
     const formattedDate = value.toISOString().split("T")[0];
-    const mood = prompt(
-      "How are you feeling today? (e.g., happy, sad, anxious)"
-    );
-    setMoods({ ...moods, [formattedDate]: mood });
+    setSelectedDate(formattedDate);
   };
 
-  const dayClassName = (date) => {
-    const formattedDate = date.toISOString().split("T")[0];
-    return moods[formattedDate] || "";
+  const handleColorChange = (color) => {
+    if (selectedDate) {
+      setColors({ ...colors, [selectedDate]: color });
+    }
+  };
+
+  const tileContent = ({ date, view }) => {
+    if (view === "month") {
+      const formattedDate = date.toISOString().split("T")[0];
+      const colorForDate = colors[formattedDate];
+      if (colorForDate) {
+        return (
+          <div style={{ height: "100%", backgroundColor: colorForDate }} />
+        );
+      }
+    }
+    return null;
   };
 
   return (
     <div>
+      {colorOptions.map((color, index) => (
+        <label key={index}>
+          <input
+            type="radio"
+            name="color"
+            value={color}
+            onChange={() => handleColorChange(color)}
+            disabled={!selectedDate}
+          />
+          <span
+            style={{
+              backgroundColor: color,
+              width: "20px",
+              height: "20px",
+              display: "inline-block",
+            }}
+          ></span>
+        </label>
+      ))}
       <Calendar
         onChange={setDate}
-        onClickDay={onDayClick}
         value={date}
-        tileClassName={({ date, view }) =>
-          view === "month" && dayClassName(date)
-        }
+        onClickDay={onDayClick}
+        tileContent={tileContent}
       />
     </div>
   );
