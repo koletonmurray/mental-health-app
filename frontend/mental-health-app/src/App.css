@@ -14,3 +14,11 @@ body {
 h1, h2, h3 {
   font-family: 'Open Sans', sans-serif;
 }
+
+.mood-happy {
+  background-color: yellow;
+}
+
+.mood-sad {
+  background-color: blue;
+}

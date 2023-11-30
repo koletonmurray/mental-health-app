@@ -12,9 +12,9 @@ function Header() {
                         <img
                             src={Logo}
                             alt="Logo"
-                            className="w-12 h-12 inline-block mr-2 -translate-y-[15%]"
+                            className="w-20 h-20 inline-block mr-2 -translate-y-[5%]"
                         />
-                        Missionary Mental Health
+                        Liahona Lifts
                     </Link>
                 </h1>
             </div>

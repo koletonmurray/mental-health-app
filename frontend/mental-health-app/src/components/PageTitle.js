@@ -1,15 +1,16 @@
 import React from 'react';
 
-function PageTitle({title, subtitle}) {
+function PageTitle({title, subtitle, position}) {
+    const setPosition = position === 'left' ? 'text-left' : 'text-center';
 
     return (
         <div>
-            <div className={`text-center pb-10 text-sunset-500`}>
+            <div className={`${setPosition} pb-10 text-sunset-500`}>
                 {title && (
-                    <h1 className='text-4xl font-semibold '>{title}</h1>
+                    <h1 className='text-4xl font-bold '>{title}</h1>
                 )}
                 {subtitle && (
-                    <h2 className='text-2xl pt-2 text-sunset-500'>{subtitle}</h2>
+                    <h2 className={`text-2xl pt-2 font-semibold text-darkgreen ${setPosition}`}>{subtitle}</h2>
                 )}
             </div>
         </div>

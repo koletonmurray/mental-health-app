@@ -1,13 +1,19 @@
 import React from 'react';
 import PageTitle from '../components/PageTitle';
 import Card from '../components/Card';
+import logo from '../img/logo.png';
 
 function Home() {
 
   return (
     <>
-      <PageTitle title={'Welcome to the Mental Health App!'} subtitle={'Learn to manage your mental health while on a mission.'}/>
-
+      <div className="flex justify-center gap-6 mb-4">
+        <div className='w-[35%]'>
+          <br/><br/>
+          <PageTitle title={'Welcome to Liahona Lifts!'} subtitle={'Learn to manage your mental health while on a mission.'} position='left'/>
+        </div>
+        <img src={logo} className='h-[200px]' alt='Liahona Lifts logo'/>
+      </div>
       {/* Flex row containing two cards */}
       <div className="flex justify-center gap-4 mb-4">
         <Card>
