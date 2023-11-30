@@ -6,7 +6,7 @@ const ChatButton = () => {
   return (
     <Link to="/chatbot">
       <div
-        className="fixed bottom-4 right-4 bg-green-500 p-3 rounded-full text-white cursor-pointer"
+        className="fixed bottom-4 right-4 bg-lightgreen p-3 rounded-full text-white cursor-pointer"
         title="Chat with an AI"
       >
         <BsChatSquareDots size={30} />
