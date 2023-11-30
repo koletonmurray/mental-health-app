@@ -103,6 +103,7 @@ function Resources() {
 
             {/* Favorites */}
             <PageTitle title={'Favorites'}/>
+            <Blurb>Here are three key resources crucial for supporting your mental well-being during your mission. The rest of the page features additional resources covering various aspects of missionary life, providing insights to enhance your experience and improve your mental health.</Blurb>
             <div className="flex justify-center items-center gap-4 mb-4">
                 <Card link={'https://www.churchofjesuschrist.org/get-help/mental-health?lang=eng'} bgcolor={'peach'}>
                     Church of Jesus Christ Mental Health Resources
@@ -148,7 +149,7 @@ function Resources() {
                 <PageTitle subtitle={'Companion Conflict'} />
                 <Blurb>Navigating and resolving conflicts within personal relationships is a profound step towards nurturing your mental well-being. The ebb and flow of human connections inevitably bring moments of discord, yet addressing these challenges with empathy and effective communication transforms them into opportunities for growth. Choosing understanding over confrontation, active listening over assumption, fosters an environment where conflicts become bridges rather than barriers. Embracing conflict resolution is an empowering act, allowing you to create spaces of emotional safety and cultivate deeper connections. As you navigate the delicate dance of interpersonal dynamics, remember that the goal is not the absence of conflict but the presence of constructive dialogue that fuels mutual understanding and fortifies the bonds that contribute to your mental resilience.</Blurb>
                 <div className="flex justify-center items-center gap-4">
-                    <Card link={'https://www.churchofjesuschrist.org/inspiration/7-ways-to-resolve-conflict-and-achieve-harmony?lang=eng'} bgcolor={'lemon'}>
+                    <Card link={'https://www.churchofjesuschrist.org/inspiration/7-ways-to-resolve-conflict-and-achieve-harmony?lang=eng'} bgcolor={'peach'}>
                         7 Ways to Resolve Conflict and Achieve Harmony - Article
                     </Card>
                     <Card link={'https://www.churchofjesuschrist.org/inspiration/the-key-to-navigating-conflict?lang=eng'} bgcolor={'lightgreen'}>
@@ -165,7 +166,7 @@ function Resources() {
                     <Card link={'https://www.churchofjesuschrist.org/life/child-nutrition-resources/healthy-eating?lang=eng'} bgcolor={'lemon'}>
                         Healthy Eating - Article
                     </Card>
-                    <Card link={'https://www.churchofjesuschrist.org/study/test/dive/goals-activities/cook-right-eat-right-and-be-healthier?lang=eng'} bgcolor={'lightgreen'}>
+                    <Card link={'https://www.churchofjesuschrist.org/study/test/dive/goals-activities/cook-right-eat-right-and-be-healthier?lang=eng'} bgcolor={'peach'}>
                         Cook Right, Eat Right, Be Healthier - Article
                     </Card>
                 </div>

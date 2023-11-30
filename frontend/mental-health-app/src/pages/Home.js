@@ -9,15 +9,15 @@ function Home() {
     <>
       <div className="flex justify-center gap-6 mb-4">
         <div className='w-[35%]'>
-          <br/><br/>
+          <br/><br/><br/><br/>
           <PageTitle title={'Welcome to Liahona Lifts!'} subtitle={'Learn to manage your mental health while on a mission.'} position='left'/>
         </div>
-        <img src={logo} className='h-[200px]' alt='Liahona Lifts logo'/>
+        <img src={logo} className='h-[300px]' alt='Liahona Lifts logo'/>
       </div>
       {/* Flex row containing two cards */}
       <div className="flex justify-center gap-4 mb-4">
         <Card>
-          Hi
+          You can do hard things!
         </Card>
 
         <Card>
