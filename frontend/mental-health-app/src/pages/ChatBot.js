@@ -6,7 +6,7 @@ function ChatBot() {
     return (
         <div>
             <PageTitle title={'Chat with an AI'}/>
-            <h1>Hi</h1>
+            <p>Hi</p>
         </div>
   );
 }

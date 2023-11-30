@@ -19,7 +19,7 @@ function Header() {
                 </h1>
             </div>
             <nav className={`bg-lightgreen p-2`}>
-                <ul className="flex justify-center space-x-10 font-bold text-lg text-white">
+                <ul className="flex justify-center space-x-10 font-semibold text-lg text-white font-serif">
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/activity">Activity</Link></li>
                     <li><Link to="/calendar">Calendar</Link></li>

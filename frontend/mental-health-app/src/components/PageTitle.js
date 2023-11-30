@@ -5,7 +5,7 @@ function PageTitle({title, subtitle, position}) {
 
     return (
         <div>
-            <div className={`${setPosition} pb-10 text-sunset-500`}>
+            <div className={`${setPosition} pb-10 text-sunset-500 pt-5`}>
                 {title && (
                     <h1 className='text-4xl font-bold '>{title}</h1>
                 )}

@@ -10,9 +10,12 @@ body {
   font-family: 'Roboto', sans-serif; /* Use Roboto as the default font for the body */
 }
 
-/* If you want Open Sans for specific elements */
+p {
+  font-family: 'Roboto', sans-serif; /* Use Roboto as the default font for the body */
+}
+
 h1, h2, h3 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Hedvig Letters Serif', serif;
 }
 
 .mood-happy {
