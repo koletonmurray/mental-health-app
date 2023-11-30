@@ -9,7 +9,7 @@ const ChatButton = () => {
         className="fixed bottom-4 right-4 bg-lightgreen p-3 rounded-full text-white cursor-pointer"
         title="Chat with an AI"
       >
-        <BsChatSquareDots size={30} />
+        <BsChatSquareDots size={32} />
       </div>
     </Link>
   );
