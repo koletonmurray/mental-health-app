@@ -21,12 +21,11 @@ function Header() {
             <nav className={`bg-lightgreen p-2`}>
                 <ul className="flex justify-center space-x-10 font-semibold text-lg text-white font-serif">
                     <li><Link to="/">Home</Link></li>
-                    <li><Link to="/activity">Activity</Link></li>
-                    <li><Link to="/calendar">Calendar</Link></li>
-                    <li><Link to="/chatbot">ChatBot</Link></li>
-                    <li><Link to="/dailytracker">Daily Tracker</Link></li>
-                    <li><Link to="/game">Game</Link></li>
+                    <li><Link to="/activity">Activities</Link></li>
                     <li><Link to="/resources">Resources</Link></li>
+                    <li><Link to="/calendar">Daily Tracker</Link></li>
+                    <li><Link to="/chatbot">Get Help</Link></li>
+                    
                 </ul>
             </nav>
         </div>
