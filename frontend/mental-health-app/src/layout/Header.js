@@ -4,14 +4,9 @@ import Logo from '../img/logo.png'
 
 function Header() {
 
-    // Define a CSS class for the header based on the selected theme
-    const primaryColor = 'bg-blue-500';
-    const secondaryColor = 'bg-blue-400';
-
-
     return (
         <div className={`bg-gray-100 flex flex-col`}>
-            <div className={`${primaryColor} text-white py-4 relative text-center font-bold`}>
+            <div className={`bg-darkgreen text-white py-4 relative text-center font-bold`}>
                 <h1 className="text-3xl">
                     <Link to="/">
                         <img
@@ -23,7 +18,7 @@ function Header() {
                     </Link>
                 </h1>
             </div>
-            <nav className={`${secondaryColor} p-2`}>
+            <nav className={`bg-lightgreen p-2`}>
                 <ul className="flex justify-center space-x-10 font-bold text-lg text-white">
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/activity">Activity</Link></li>
