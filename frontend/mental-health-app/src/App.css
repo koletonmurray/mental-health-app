@@ -1,16 +1,26 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 .App {
   text-align: center;
 }
 
 body {
-  font-family: 'Roboto', sans-serif; /* Use Roboto as the default font for the body */
+  font-family: "Roboto", sans-serif; /* Use Roboto as the default font for the body */
 }
 
 /* If you want Open Sans for specific elements */
-h1, h2, h3 {
-  font-family: 'Open Sans', sans-serif;
+h1,
+h2,
+h3 {
+  font-family: "Open Sans", sans-serif;
+}
+
+.mood-happy {
+  background-color: yellow;
+}
+
+.mood-sad {
+  background-color: blue;
 }
