@@ -1,20 +1,18 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 .App {
   text-align: center;
 }
 
 body {
-  font-family: "Roboto", sans-serif; /* Use Roboto as the default font for the body */
+  font-family: 'Roboto', sans-serif; /* Use Roboto as the default font for the body */
 }
 
 /* If you want Open Sans for specific elements */
-h1,
-h2,
-h3 {
-  font-family: "Open Sans", sans-serif;
+h1, h2, h3 {
+  font-family: 'Open Sans', sans-serif;
 }
 
 .mood-happy {
@@ -23,4 +21,19 @@ h3 {
 
 .mood-sad {
   background-color: blue;
+}
+
+/* Add this to your CSS */
+.nav-button {
+  border: 2px solid #39998E; /* Adjust the border styles as needed */
+  padding: 8px 16px; /* Adjust the padding as needed */
+  background-color: #fff; /* Adjust the background color as needed */
+  color: #39998E; /* Adjust the text color as needed */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Add a smooth transition effect */
+}
+
+.nav-button:hover {
+  background-color: #39998E;
+  color: #fff;
 }
