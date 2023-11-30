@@ -7,11 +7,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif; /* Use Roboto as the default font for the body */
-}
-
-p {
-  font-family: 'Roboto', sans-serif; /* Use Roboto as the default font for the body */
+  font-family: 'Montserrat', sans-serif; /* Use Monteserrat as the default font for the body */
 }
 
 h1, h2, h3 {
