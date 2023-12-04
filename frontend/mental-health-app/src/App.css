@@ -36,3 +36,51 @@ h1, h2, h3 {
   background-color: #39998E;
   color: #fff;
 }
+
+.activity-card {
+  display: inline-block;
+  background-color: #fff;
+  color: #39998E;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: calc(50% - 5px);
+  margin: 0 5px 5px 0;
+  contain: content;
+}
+
+.activity-title {
+  margin: 0;
+  font-weight: bold;
+  border: 2px solid #39998E;
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.activity-title:hover {
+  background-color: #39998E;
+  color: #fff;
+}
+
+.selected {
+  background-color: #39998E;
+  color: #fff;
+}
+
+.activity-description {
+  border: 2px solid #39998E;
+  padding: 8px;
+}
+
+.activity-example {
+  padding: 8px;
+  font-style: italic;
+}
+
+.display-none {
+  display: none;
+}
+
+.display-block {
+  display: block;
+}
