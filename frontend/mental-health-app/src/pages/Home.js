@@ -27,18 +27,18 @@ function Home() {
           Activities and Games to Promote Mental Health
         </ImgCard>
 
-        <ImgCard img={resources}>
+        <ImgCard img={resources} link={'/resources'}>
           Resources for Dealing with Difficulty Times
         </ImgCard>
       </div>
 
       {/* Flex row containing two cards */}
       <div className="flex justify-center gap-4 mb-4">
-        <ImgCard img={track}>
+        <ImgCard img={track} link={'/track'}>
           Track How You're Feeling Every Day
         </ImgCard>
 
-        <ImgCard img={gethelp}>
+        <ImgCard img={gethelp} link={'/get-help' }>
           Where to Get Help
         </ImgCard>
       </div>

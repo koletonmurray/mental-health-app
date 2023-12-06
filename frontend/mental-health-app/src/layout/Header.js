@@ -23,8 +23,8 @@ function Header() {
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/activity">Activities</Link></li>
                     <li><Link to="/resources">Resources</Link></li>
-                    <li><Link to="/calendar">Daily Tracker</Link></li>
-                    <li><Link to="/chatbot">Get Help</Link></li>
+                    <li><Link to="/track">Daily Tracker</Link></li>
+                    <li><Link to='/get-help'>Get Help</Link></li>
                     
                 </ul>
             </nav>
