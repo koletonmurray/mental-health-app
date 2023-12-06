@@ -42,10 +42,12 @@ const MentalHealthCalendar = () => {
   };
 
   return (
-    <div style={{ justifyContent: "center" }}>
+    <div
+      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+    >
       <h1>Welcome to the Calendar Page!</h1>
       <br />
-      <p>Pick The day and how you felt that day</p>
+      <p>Pick the day and how you felt that day</p>
       <br />
       <div
         className="color-options-container"
@@ -64,13 +66,14 @@ const MentalHealthCalendar = () => {
             />
           </label>
         ))}
-        <Calendar
-          onChange={setDate}
-          value={date}
-          onClickDay={onDayClick}
-          tileContent={tileContent}
-        />
       </div>
+      <br />
+      <Calendar
+        onChange={setDate}
+        value={date}
+        onClickDay={onDayClick}
+        tileContent={tileContent}
+      />
     </div>
   );
 };
