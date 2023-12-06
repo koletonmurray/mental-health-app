@@ -113,6 +113,8 @@ function Activities() {
                 </div>
             </div>
 
+            <br/><br/><div className='text-sunset text-center'>* More games and activities coming soon * </div>
+
         </div>
   );
 }
