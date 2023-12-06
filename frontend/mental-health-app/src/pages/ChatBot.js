@@ -151,7 +151,10 @@ function ChatBot() {
       </div>
 
       <div className="flex justify-center pt-2">
-        <PageTitle title={"Emergency Hotlines"} />
+        <PageTitle title={"Emergency Hotlines"}/>
+      </div>
+      <div className={`text-left pb-10 text-lightgreen-600 mx-auto text-center`}>
+      Click a hotline card to automatically call or text the associated hotline.
       </div>
 
       {/* Emergency Contact Section */}
