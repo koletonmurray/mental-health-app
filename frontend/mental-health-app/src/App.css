@@ -1,17 +1,19 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 .App {
   text-align: center;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif; /* Use Monteserrat as the default font for the body */
+  font-family: "Montserrat", sans-serif; /* Use Monteserrat as the default font for the body */
 }
 
-h1, h2, h3 {
-  font-family: 'Hedvig Letters Serif', serif;
+h1,
+h2,
+h3 {
+  font-family: "Hedvig Letters Serif", serif;
 }
 
 .mood-happy {
@@ -24,15 +26,50 @@ h1, h2, h3 {
 
 /* Add this to your CSS */
 .nav-button {
-  border: 2px solid #39998E; /* Adjust the border styles as needed */
+  border: 2px solid #39998e; /* Adjust the border styles as needed */
   padding: 8px 16px; /* Adjust the padding as needed */
   background-color: #fff; /* Adjust the background color as needed */
-  color: #39998E; /* Adjust the text color as needed */
+  color: #39998e; /* Adjust the text color as needed */
   cursor: pointer;
   transition: all 0.3s ease; /* Add a smooth transition effect */
 }
 
 .nav-button:hover {
-  background-color: #39998E;
+  background-color: #39998e;
   color: #fff;
+}
+
+.color-options-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.color-option {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.color-radio-input {
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 4px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.color-box {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.color-name {
+  font-size: 14px;
 }

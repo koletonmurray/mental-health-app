@@ -7,7 +7,15 @@ const MentalHealthCalendar = () => {
   const [selectedDate, setSelectedDate] = useState(null);
   const [colors, setColors] = useState({});
 
-  const colorOptions = ["#FFB6C1", "#87CEEB", "#98FB98", "#FFFFE0", "#FFDAB9"]; // Example colors
+  const colorOptions = [
+    "#FFB6C1",
+    "#87CEEB",
+    "#98FB98",
+    "#FFFFE0",
+    "#FFDAB9",
+    "#FFFFFF",
+  ]; // Example colors
+  const colorNames = ["Mad", "Sad", "Happy", "Neutral", "Okay", "Clear"];
 
   const onDayClick = (value) => {
     const formattedDate = value.toISOString().split("T")[0];
@@ -34,32 +42,35 @@ const MentalHealthCalendar = () => {
   };
 
   return (
-    <div>
-      {colorOptions.map((color, index) => (
-        <label key={index}>
-          <input
-            type="radio"
-            name="color"
-            value={color}
-            onChange={() => handleColorChange(color)}
-            disabled={!selectedDate}
-          />
-          <span
-            style={{
-              backgroundColor: color,
-              width: "20px",
-              height: "20px",
-              display: "inline-block",
-            }}
-          ></span>
-        </label>
-      ))}
-      <Calendar
-        onChange={setDate}
-        value={date}
-        onClickDay={onDayClick}
-        tileContent={tileContent}
-      />
+    <div style={{ justifyContent: "center" }}>
+      <h1>Welcome to the Calendar Page!</h1>
+      <br />
+      <p>Pick The day and how you felt that day</p>
+      <br />
+      <div
+        className="color-options-container"
+        style={{ justifyContent: "center" }}
+      >
+        {colorOptions.map((color, index) => (
+          <label key={index} className="color-option">
+            <input
+              type="button"
+              name="color"
+              value={colorNames[index]}
+              onClick={() => handleColorChange(color)}
+              disabled={!selectedDate}
+              className="color-radio-input"
+              style={{ backgroundColor: color }}
+            />
+          </label>
+        ))}
+        <Calendar
+          onChange={setDate}
+          value={date}
+          onClickDay={onDayClick}
+          tileContent={tileContent}
+        />
+      </div>
     </div>
   );
 };
