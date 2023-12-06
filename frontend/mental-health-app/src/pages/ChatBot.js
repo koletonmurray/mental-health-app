@@ -13,9 +13,49 @@ function ChatBot() {
 
   const textStyle = {
     backgroundColor: "#1B524E", // same color
-    opacity: 0.75,
+    opacity: 0.85,
     padding: "1rem",
     color: "white",
+  };
+
+  const hotlineNumbers = [
+    {
+      name: "Mental Health Emergency Hotline",
+      number: "Dial 988",
+      message: "Calling 988 will connect you to a crisis counselor regardless of where you are in the United States.",
+      phone: "988"
+    },
+    {
+      name: "Crisis Text Line",
+      number: "Text REASON to 741741",
+      phone: "741741",
+      isText: true,
+    },
+    {
+      name: "National Suicide Prevention Lifeline",
+      number: "1-800-273-TALK",
+      phone: "1-800-273-8255"
+    },
+    {
+      name: "Self-Harm Hotline",
+      number: "1-800-DONT-CUT",
+      phone: "1-800-366-8288"
+    }
+  ];
+
+  // Function to handle the confirmation popup and initiate the call or text
+  const handleContact = (name, phone, isText) => {
+    const isConfirmed = window.confirm(
+      `Do you want to ${isText ? "text" : "call"} ${name} at ${phone}?`
+    );
+    if (isConfirmed) {
+      if (isText) {
+        const message = encodeURIComponent("REASON");
+        window.location.href = `sms:${phone}?body=${message}`;
+      } else {
+        window.location.href = `tel:${phone.replace(/\D/g, "")}`;
+      }
+    }
   };
 
   return (
@@ -24,16 +64,16 @@ function ChatBot() {
         <PageTitle title={"Get Help"} />
       </div>
 
-      <div className="text-center mb-10 mx-auto max-w-4xl px-4">
+      <div className="text-left mb-10 mx-auto max-w-4xl px-4">
         <p>
           It's always okay to seek help. Missions are not easy and we strongly
           encourage reaching out to others during challenging times. Here are
           some sources of support that are always available to you.
         </p>
-        <p>Remember, you're not alone in this journey.</p>
+        <p className="text-center font-bold pt-7">Remember, you're not alone in this journey!</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10 mx-4 md:mx-48">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10 mx-4 md:mx-48 text-left">
         <BackgroundImgCard
           img={chatbotImage}
           className="h-64 md:h-96"
@@ -52,7 +92,7 @@ function ChatBot() {
                 Use it to get help with scriptures, habits, homesickness, or
                 anything about missonary life.
               </p>
-              <p className="text-sm">
+              <p className="text-sm text-center">
                 Click this image or the chat button below.
               </p>
             </div>
@@ -109,6 +149,37 @@ function ChatBot() {
           </div>
         </BackgroundImgCard>
       </div>
+
+      <div className="flex justify-center pt-2">
+        <PageTitle title={"Emergency Hotlines"} />
+      </div>
+
+      {/* Emergency Contact Section */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10 mx-4 md:mx-48 text-center">
+          {hotlineNumbers.map((hotline, index) => (
+            <a
+              key={index}
+              href={`tel:${hotline.phone.replace(/\D/g, "")}`}
+              onClick={(e) => {
+                e.preventDefault();
+                handleContact(hotline.name, hotline.phone, hotline.isText);
+              }}
+            >
+              <BackgroundImgCard className="h-full bg-lightgreen-600" style={cardStyle}>
+                <div className="text-white p-5">
+                  <h3 className="text-xl font-bold">{hotline.name}</h3>
+                  <p className="text-sm">{hotline.number}</p>
+                  {hotline.message && (
+                    <>
+                      <br />
+                      <p className="text-sm text-left">{hotline.message}</p>
+                    </>
+                  )}
+                </div>
+              </BackgroundImgCard>
+            </a>
+          ))}
+        </div>
     </>
   );
 }
