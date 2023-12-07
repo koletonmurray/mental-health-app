@@ -1,11 +1,14 @@
 import React from 'react';
 
-function PageTitle({title, subtitle, position}) {
+function PageTitle({title, subtitle, position, pbottom, ptop}) {
     const setPosition = position === 'left' ? 'text-left' : 'text-center';
+    const setPBottom = pbottom === 5 ? 'pb-5' : 'pb-10';
+    const setPTop = ptop === 5 ? 'pt-0' : 'pt-5';
+
 
     return (
         <div>
-            <div className={`${setPosition} pb-10 text-sunset-500 pt-5`}>
+            <div className={`${setPosition} ${setPBottom} text-sunset-500 ${setPTop}`}>
                 {title && (
                     <h1 className='text-4xl font-bold '>{title}</h1>
                 )}

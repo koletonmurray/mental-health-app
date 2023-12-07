@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
+import PageTitle from "../components/PageTitle";
 
 const MentalHealthCalendar = () => {
   const [date, setDate] = useState(new Date());
@@ -45,10 +46,9 @@ const MentalHealthCalendar = () => {
     <div
       style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
-      <h1>Welcome to the Calendar Page!</h1>
-      <br />
-      <p>Pick the day and how you felt that day</p>
-      <br />
+      <PageTitle title={'Daily mood tracker!'} pbottom={5}/>
+      <PageTitle subtitle={'Pick the day and how you felt that day'} ptop={0}/>
+      <br/>
       <div
         className="color-options-container"
         style={{ justifyContent: "center" }}
