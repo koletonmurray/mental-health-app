@@ -1,5 +1,6 @@
 import React from "react";
 import PageTitle from "../components/PageTitle";
+import Blurb from '../components/Blurb';
 import BackgroundImgCard from "../components/BackgroundImgCard";
 import chatbotImage from "../img/chatbotImage.png";
 import missionPresidentImage from "../img/missionPresident.png";
@@ -64,14 +65,14 @@ function ChatBot() {
         <PageTitle title={"Get Help"} />
       </div>
 
-      <div className="text-left mb-10 mx-auto max-w-4xl px-4">
+      <Blurb>
         <p>
           It's always okay to seek help. Missions are not easy and we strongly
           encourage reaching out to others during challenging times. Here are
           some sources of support that are always available to you.
         </p>
-        <p className="text-center font-bold pt-7">Remember, you're not alone in this journey!</p>
-      </div>
+        <p className="text-center font-bold pt-7 text-sunset">Remember, you're not alone in this journey!</p>
+      </Blurb>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10 mx-4 md:mx-48 text-left">
         <BackgroundImgCard
