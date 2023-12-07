@@ -79,7 +79,7 @@ h3 {
   color: #39998E;
   cursor: pointer;
   transition: all 0.3s ease;
-  width: calc(50% - 5px);
+  width: calc(40% - 5px);
   margin: 0 5px 5px 0;
   contain: content;
 }
