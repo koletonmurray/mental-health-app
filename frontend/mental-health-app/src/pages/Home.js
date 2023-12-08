@@ -13,12 +13,11 @@ function Home() {
 
   return (
     <>
-      <div className="flex flex-wrap justify-center gap-6 mb-10">
+      <div className="flex flex-wrap items-center justify-center gap-6 mb-10">
         <div className='w-[35%]'>
-          <br/><br/><br/><br/><br/>
           <PageTitle title={'Welcome to Liahona Lifts!'} subtitle={'Learn to manage your mental health while on a mission.'} position='left'/>
         </div>
-        <img src={logo} className='h-[350px]' alt='Liahona Lifts logo'/>
+        <img src={logo} className={`${window.innerWidth > '600px' ? 'h-[350px]' : 'h-[230px]'}`} alt='Liahona Lifts logo'/>
       </div>
       
       {/* Flex row containing two cards */}
@@ -44,7 +43,7 @@ function Home() {
       </div>
       <div className='pb-10'></div>
 
-      <div className="flex flex-wrap justify-center gap-6 mb-10">
+      <div className="flex flex-wrap items-center justify-center gap-6 mb-10">
         <img src={face} className='h-[200px] mt-2' alt='Graphic of man and his brain'/>
         <div className='w-[35%]'>
           <PageTitle title={'We all Struggle!'} position='left'/>
