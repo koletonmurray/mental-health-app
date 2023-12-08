@@ -120,3 +120,52 @@ h3 {
 .display-block {
   display: block;
 }
+
+.w-25 {
+  width: 25%;
+}
+
+.resources-menu-item {
+  margin-bottom: 5px;
+}
+
+.container {
+  contain: content;
+}
+
+.test {
+  border: solid 1px black;
+}
+
+.max-height {
+  max-height: fit-content;
+}
+
+.card {
+  width: 25%;
+  min-height: fit-content;
+  border: solid red 1px;
+}
+
+.card-info {
+  min-height: 100px;
+  max-height: fit-content;
+}
+
+.img-card-img {
+  box-shadow: 2px 2px 5px 2px rgba(30, 30, 30, 0.295);
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 600px) {
+  .flex-item {
+    flex: 0 0 25%;
+  }
+
+}
+
+@media screen and (max-width: 300px) {
+  .flex-item {
+    flex: 0 0 calc(33.3333% - 10px);
+  }
+}

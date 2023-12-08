@@ -2,10 +2,10 @@ import React from 'react';
 import PageTitle from '../components/PageTitle';
 import ImgCard from '../components/ImgCard';
 import logo from '../img/logo.png';
-import resources from '../img/resources.png';
-import track from '../img/track.png';
-import gethelp from '../img/getHelp.png';
-import activities from '../img/activities.png';
+import resources from '../img/resources_cropped.png';
+import track from '../img/track_cropped.png';
+import gethelp from '../img/getHelp_cropped.png';
+import activities from '../img/activities_cropped.png';
 import face from '../img/face.png';
 import Blurb from '../components/Blurb';
 
@@ -13,7 +13,7 @@ function Home() {
 
   return (
     <>
-      <div className="flex justify-center gap-6 mb-10">
+      <div className="flex flex-wrap justify-center gap-6 mb-10">
         <div className='w-[35%]'>
           <br/><br/><br/><br/><br/>
           <PageTitle title={'Welcome to Liahona Lifts!'} subtitle={'Learn to manage your mental health while on a mission.'} position='left'/>
@@ -22,7 +22,7 @@ function Home() {
       </div>
       
       {/* Flex row containing two cards */}
-      <div className="flex justify-center gap-4 mb-10">
+      <div className={`flex flex-wrap justify-center gap-4 ${window.innerWidth > '700px' ? 'mb-10' : 'mb-4'}`}>
         <ImgCard img={activities} link={'/activity'}>
           Activities and Games to Promote Mental Health
         </ImgCard>
@@ -33,7 +33,7 @@ function Home() {
       </div>
 
       {/* Flex row containing two cards */}
-      <div className="flex justify-center gap-4 mb-4">
+      <div className="flex flex-wrap justify-center gap-4 mb-4">
         <ImgCard img={track} link={'/track'}>
           Track How You're Feeling Every Day
         </ImgCard>
@@ -44,7 +44,7 @@ function Home() {
       </div>
       <div className='pb-10'></div>
 
-      <div className="flex justify-center gap-6 mb-10">
+      <div className="flex flex-wrap justify-center gap-6 mb-10">
         <img src={face} className='h-[200px] mt-2' alt='Graphic of man and his brain'/>
         <div className='w-[35%]'>
           <PageTitle title={'We all Struggle!'} position='left'/>

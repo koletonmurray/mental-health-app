@@ -9,7 +9,7 @@ function Layout({ children }) {
       <Header />
       <div className="min-h-[650px] flex flex-col relative">
         <div className="flex-grow p-4">
-          <div className="bg-white rounded-lg p-4 shadow-md">{children}</div>
+          <div className="bg-white rounded-lg p-4 shadow-md" style={{contain: 'content', overflow: 'wrap'}}>{children}</div>
         </div>
         {/* Add the ChatButton component at the bottom right corner */}
         <ChatButton />

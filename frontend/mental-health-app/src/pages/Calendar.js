@@ -54,7 +54,7 @@ const MentalHealthCalendar = () => {
         style={{ justifyContent: "center" }}
       >
         {colorOptions.map((color, index) => (
-          <label key={index} className="color-option">
+          <label key={index} className="color-option flex-item text-center justify-center">
             <input
               type="button"
               name="color"
