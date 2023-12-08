@@ -65,7 +65,7 @@ function Resources() {
             {/* Favorites */}
             <PageTitle title={'Favorites'}/>
             <Blurb>Here are three key resources crucial for supporting your mental well-being during your mission. The rest of the page features additional resources covering various aspects of missionary life, providing insights to enhance your experience and improve your mental health.</Blurb>
-            <div className="flex flex-wrap justify-center items-center gap-4 mb-4 container">
+            <div className="flex flex-wrap justify-center items-center gap-4 mb-4">
                 <Card link={'https://www.churchofjesuschrist.org/get-help/mental-health?lang=eng'} bgcolor={'peach'}>
                     Church of Jesus Christ Mental Health Resources
                 </Card>
