@@ -1,6 +1,5 @@
 import React from "react";
-//import { Link } from "react-router-dom";
-import { BsChatSquareDots } from "react-icons/bs"; // You may need to install react-icons
+import { BsChatSquareDots } from "react-icons/bs";
 
 const ChatButton = () => {
   return (
@@ -10,7 +9,7 @@ const ChatButton = () => {
       rel="noopener noreferrer"
     >
       <div
-        className="fixed bottom-4 right-4 bg-lightgreen p-3 rounded-full text-white cursor-pointer"
+        className="fixed bottom-4 right-4 bg-lightgreen p-3 rounded-full text-white cursor-pointer z-50"
         title="Chat with an AI"
       >
         <BsChatSquareDots size={32} />
